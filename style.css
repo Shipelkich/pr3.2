@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.main-title {
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.block {
+    float: left;
+    width: 50%;
+    height: 40vh;
+    box-sizing: border-box;
+    border: 2px solid #eb6c6c;
+    padding: 30px;
+}
+
+.block:nth-child(odd) {
+    border-right: none;
+}
+
+.block:nth-child(1), 
+.block:nth-child(2) {
+    border-bottom: none;
+}
+
+.block h2 {
+    margin: 0 0 20px 0;
+    font-size: 18px;
+    position: relative;
+    padding-left: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.block h2::before {
+    content: attr(data-num);
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #c71e1e;
+    border-radius: 50%;
+    color: #c71e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.block li {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #000;
+}
+
+.block li::before {
+    content: "- ";
+    position: absolute;
+    left: 0;
+    color: inherit;
+}
+
+.block li:nth-child(even) {
+    color: #c71e1e;
+}
